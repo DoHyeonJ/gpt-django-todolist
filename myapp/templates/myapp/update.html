@@ -1,0 +1,13 @@
+<!-- myapp/templates/myapp/update.html -->
+
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<h1 class="mb-4">Edit Task</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+{% endblock %}
